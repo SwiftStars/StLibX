@@ -9,6 +9,7 @@ trigger:
 pool:
   vmImage: 'macos-latest' 
 
+steps:
 - script: |
     echo Running SwiftStars/StLibX build.
     swift build -v
