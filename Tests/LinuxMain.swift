@@ -1,6 +1,6 @@
 import XCTest
 
-import StLibXTests
+import StdLibXTests
 
 var tests = [XCTestCaseEntry]()
 tests += StLibXTests.allTests()

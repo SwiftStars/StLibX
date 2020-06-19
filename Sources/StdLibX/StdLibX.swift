@@ -1,4 +1,4 @@
-struct StLibX {
+struct StdLibX {
     var text = "Hello, World!"
 }
 

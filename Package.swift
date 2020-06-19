@@ -4,18 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "StLibX",
+    name: "StdLibX",
     products: [
         .library(
-            name: "StLibX",
-            targets: ["StLibX"]),
+            name: "StdLibX",
+            targets: ["StdLibX"]),
     ],
     targets: [
         .target(
-            name: "StLibX",
+            name: "StdLibX",
             dependencies: []),
         .testTarget(
-            name: "StLibXTests",
-            dependencies: ["StLibX"]),
+            name: "StdLibXTests",
+            dependencies: ["StdLibX"]),
     ]
 )

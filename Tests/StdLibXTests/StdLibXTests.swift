@@ -1,5 +1,5 @@
 import XCTest
-@testable import StLibX
+@testable import StdLibX
 
 public func XCTAssert(_ expression: Bool, false fm: String, true tm: String?) {
     if expression == true {
@@ -12,9 +12,9 @@ public func XCTAssert(_ expression: Bool, false fm: String, true tm: String?) {
     }
 }
 
-final class StLibXTests: XCTestCase {
+final class StdLibXTests: XCTestCase {
     func testRepeatUntil() {
-        print("\n=--StLibX Repeat Until Test-------------------------------=\n")
+        print("\n=--StdLibX Repeat Until Test------------------------------=\n")
         var end = 0
         repeatUntil(run: { (index, _) -> Int in
             if index == 0 {
