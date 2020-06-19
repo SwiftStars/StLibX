@@ -1,7 +1,21 @@
 # StdLibX
-[![Azure Pipelines Build Status](https://img.shields.io/azure-devops/build/SwiftStars/cf764067-e0bf-47cf-ba14-ac21bb8771d8/1?logo=Azure%20Pipelines&logoColor=informational&style=flat-square)](https://dev.azure.com/SwiftStars/StdLibX/_build?definitionId=1) [![Code Factor Score](https://img.shields.io/codefactor/grade/github/SwiftStars/StdLibX?logo=codefactor&style=flat-square)](https://www.codefactor.io/repository/github/swiftstars/stdlibx) [![Swift Version (v5.2)](https://img.shields.io/badge/Swift-v5.2-orange?style=flat-square&logo=swift)](https://github.com/apple/swift) [![License MIT](https://img.shields.io/github/license/SwiftStars/StLibX?color=blue&logo=GitHub&style=flat-square)](LICENSE)
+[![Azure Pipelines Build Status](https://img.shields.io/azure-devops/build/SwiftStars/cf764067-e0bf-47cf-ba14-ac21bb8771d8/1?logo=Azure%20Pipelines&logoColor=informational&style=flat-square)](https://dev.azure.com/SwiftStars/StdLibX/_build?definitionId=1) [![Code Factor Score](https://img.shields.io/codefactor/grade/github/SwiftStars/StdLibX?logo=codefactor&style=flat-square)](https://www.codefactor.io/repository/github/swiftstars/stdlibx) [![Swift Version (v5.2)](https://img.shields.io/badge/Swift-v5.2-orange?style=flat-square&logo=swift)](https://github.com/apple/swift) [![License MIT](https://img.shields.io/github/license/SwiftStars/StdLibX?color=blue&logo=GitHub&style=flat-square)](LICENSE)
 
 An extension to the Swift Standard Library.
+
+## What is StdLibX
+Swift is great. It can do so much that some people don't even know about. You can use it to make iOS apps, CLIs, and probably a whole bunch more I don't know about. However, there are some things in Swift you can't get that make since to be part of the language (or Apple would never say yes, but we want them anyway).
+
+StdLibX hopes to fix that by providing you with type, functions, and extensions that make Swift easier to use without you rewriting the same old redundant code that you may have been using.
+
+StdLibX has one other goal, too. I'm hoping to keep all things in StdLibX documented and tested, so you can easily understand everything you type.
+
+**Fun Fact:** The "Look Up" feature in MacOS works slightly differently in Xcode. It provides documentation for what you clicked on. Plus, this isn't an Apple Library exclusive thing. Try Look Up on `repeatUntil(run:check:)`.
+
+## Contributing
+If you have some spare time (or code), please contribute to StdLibX. The more code included in the library, the more useful it becomes.
+
+ Just fork the project, clone it to your computer and add some features (please also document any new features), then push your changes and open a pull request explaining your changes.
 
 ## Using StdLibX in your project.
 To use StdLibX in your project...
