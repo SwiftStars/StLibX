@@ -1,14 +1,13 @@
 import XCTest
 @testable import StdLibX
 
-public func XCTAssert(_ expression: Bool, false fm: String, true tm: String?) {
+public func XCTAssert(_ expression: Bool, false flsm: String, true trm: String?) {
     if expression == true {
-        if tm != nil {
-            print(tm!)
+        if trm != nil {
+            print(trm!)
         }
-    }
-    else {
-        XCTFail(fm)
+    } else {
+        XCTFail(flsm)
     }
 }
 
@@ -19,8 +18,7 @@ final class StdLibXTests: XCTestCase {
         repeatUntil(run: { (index, _) -> Int in
             if index == 0 {
                 print("This code has been run 1 time.")
-            }
-            else {
+            } else {
                 print("This code has been run \(index + 1) times.")
             }
             return index + 1
@@ -41,6 +39,6 @@ final class StdLibXTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testRepeatUntil", testRepeatUntil),
+        ("testRepeatUntil", testRepeatUntil)
     ]
 }

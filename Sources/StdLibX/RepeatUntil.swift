@@ -11,7 +11,7 @@ import Foundation
 ///   - check: A function that is run after `run` that is given the output and amount of times `run` has been run, returning whether or not to continue.
 public func repeatUntil<T>(run: @escaping (Int, T?) -> T, check: @escaping (Int, T) -> Bool) {
     var times = 0
-    var prev: T? = nil
+    var prev: T?
     while true {
         prev = run(times, prev)
         times += 1
