@@ -7,7 +7,7 @@ import Foundation
 
 /// Run a void until another void returns true.
 ///
-/// `repeatUntil` runs a void ( `run` ), over and over again, until a second void ( `check` ), which is get's ran between each run of `run`, returns `true`.
+/// `repeatUntil` runs a void (`run`), over and over again, until a second void (`check`), which is get's ran between each run of `run`, returns `true`.
 ///
 /// `run` is given two variables, an `Int` and a `T?` (`T` is whatever you want it to be).
 /// The `Int` is the number of times `run` has been ran before starting at zero. So, the first time will be 0, the second time will be 1, the third time will be 2, and so on.
@@ -44,7 +44,7 @@ public func repeatUntil<T>(run: @escaping (Int, T?) -> T, check: @escaping (Int,
 
 /// Run a void until it returns true.
 ///
-/// `repeatUntil` runs a void ( `run` ), over and over, again until it returns true.
+/// `repeatUntil` runs a void (`run`), over and over, again until it returns true.
 ///
 /// `run` is given two variables, an `Int` and a `T?` (`T` is whatever you want it to be).
 /// The `Int` is the number of times `run` has been ran before starting at zero. So, the first time will be 0, the second time will be 1, the third time will be 2, and so on.

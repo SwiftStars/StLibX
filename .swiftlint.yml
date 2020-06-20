@@ -4,3 +4,14 @@ included:
 disabled_rules:
   - line_length
   - multiple_closures_with_trailing_closure
+custom_rules:
+  doc_declared_nolink:
+    name: No Linked Declared In
+    message: Declared in should have a link to the file.
+    regex: swift(?!\()\n\/\/\/(\n@.*)?\npublic
+    severity: warning
+  doc_declared_nobold:
+    name: No Bold Declared In
+    message: Declared in should be bold.
+    regex: \/\/\/ (?!(\*\*))Declared in
+    severity: error
