@@ -1,0 +1,7 @@
+.gitattributes export-ignore
+.gitignore     export-ignore
+.swiftlint.yml export-ignore
+/Tests export-ignore
+/.github export-ignore
+
+*.swift   text diff=swift
