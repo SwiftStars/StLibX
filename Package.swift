@@ -8,7 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "StdLibX",
-            targets: ["StdLibX"]),
+            targets: ["StdLibX"])
     ],
     targets: [
         .target(
@@ -16,6 +16,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "StdLibXTests",
-            dependencies: ["StdLibX"]),
+            dependencies: ["StdLibX"])
     ]
 )

@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		8586E5B524A00A880095CCE3 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586E5B424A00A880095CCE3 /* Prompt.swift */; };
 		OBJ_25 /* RepeatUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* RepeatUntil.swift */; };
 		OBJ_26 /* StdLibX.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* StdLibX.swift */; };
 		OBJ_33 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		8526988B249D580E00F31EED /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		8586E5B424A00A880095CCE3 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		85B304B4249EB04C00C43A13 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		OBJ_10 /* StdLibX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StdLibX.swift; sourceTree = "<group>"; };
 		OBJ_13 /* StdLibXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StdLibXTests.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				OBJ_9 /* RepeatUntil.swift */,
 				OBJ_10 /* StdLibX.swift */,
+				8586E5B424A00A880095CCE3 /* Prompt.swift */,
 			);
 			name = StdLibX;
 			path = Sources/StdLibX;
@@ -244,6 +247,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_25 /* RepeatUntil.swift in Sources */,
+				8586E5B524A00A880095CCE3 /* Prompt.swift in Sources */,
 				OBJ_26 /* StdLibX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

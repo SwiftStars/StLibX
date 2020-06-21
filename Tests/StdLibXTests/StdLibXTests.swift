@@ -47,7 +47,7 @@ final class StdLibXTests: XCTestCase {
             return (out == 10, (out ?? 0) + 1)
         }
         XCTAssert(end == 10,
-            false: "repeatUntil(run:check:) was not run all 10 times. It was run \(end2) times.",
+            false: "repeatUntil(run:check:) was not run all 10 times. It was run \(end) or \(end2) times.",
             true: "repeatUntil(run:check:) was run all 10 times. Proof: \(end) and \(end2)")
         print("\n=----------------------------------------------------------=\n")
     }
