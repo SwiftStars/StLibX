@@ -15,10 +15,12 @@ steps:
     swift build -v
   displayName: 'Swift Build'
 
-- script: |
-    echo Running SwiftStars/StLibX tests.
-    swift test -v
-    echo "\n=---------------------------------------------------------=\n"
-    echo Uploading Coverage Reportes to CodeCov
-    bash <(curl -s https://codecov.io/bash)
-  displayName: 'Swift Test'
+- task: Xcode@5
+  inputs:
+    actions: 'build test'
+    xcodeVersion: '11'
+    packageApp: false
+    destinationPlatformOption: 'macOS'
+  displayName: 'Xcode Test'
+
+- script: bash <(curl -s https://codecov.io/bash)
