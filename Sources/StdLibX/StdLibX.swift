@@ -5,10 +5,6 @@
 
 @_exported import Foundation
 
-struct StdLibX {
-    var text = "Hello, World!"
-}
-
 public protocol NilInit {
     init()
 }

@@ -1,3 +1,8 @@
+//
+// StdLibX Code (Tests)
+// Copyright © Ben Sova 2020 (MIT)
+//
+
 import XCTest
 
 #if !canImport(ObjectiveC)

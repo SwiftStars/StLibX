@@ -1,3 +1,8 @@
+//
+// StdLibX Code (Tests)
+// Copyright © Ben Sova 2020 (MIT)
+//
+
 import XCTest
 @testable import StdLibX
 
@@ -11,7 +16,7 @@ public func XCTAssert(_ expression: Bool, false flsm: String, true trm: String? 
     }
 }
 
-final class StdLibXTests: XCTestCase {
+final class RepeatUntilTests: XCTestCase {
     func testRepeatUntilCheck() {
         print("\n=--StdLibX Repeat Until Check-----------------------------=\n")
         var end = 0
@@ -34,7 +39,7 @@ final class StdLibXTests: XCTestCase {
         XCTAssert(end == 10,
             false: "repeatUntil(run:check:) was not run all 10 times. It was run \(end) times.",
             true: "repeatUntil(run:check:) was run all 10 times. Proof: \(end)")
-        print("\n=----------------------------------------------------------=\n")
+        print("\n=---------------------------------------------------------=\n")
     }
     func testRepeatUntilRun() {
         print("\n=--StdLibX Repeat Until Run--------------------------------=\n")
@@ -51,7 +56,7 @@ final class StdLibXTests: XCTestCase {
             true: "repeatUntil(run:check:) was run all 10 times. Proof: \(end) and \(end2)")
         print("\n=----------------------------------------------------------=\n")
     }
-    static var allTests = [
+    static var myTests = [
         ("RepeatUntil Run-Check Test", testRepeatUntilCheck),
         ("RepeatUntil Run Test", testRepeatUntilRun)
     ]
