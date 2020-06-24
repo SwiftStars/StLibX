@@ -19,6 +19,10 @@ class StringedArraysTests: XCTestCase {
         XCTAssert(andSplitArray == "First, Second, Third, Forth, and Fifth",
                   false: "The String Array And Split did not match expected output. Expected: \("First, Second, Third, Forth, and Fifth"). Got: \(andSplitArray)",
                   true: "The String Array And Split did match as expected output. Proof: \(andSplitArray)")
+        let norSplitArray = stringArray.norSplit()
+        XCTAssert(norSplitArray == "First, Second, Third, Forth, nor Fifth",
+                  false: "The String Array And Split did not match expected output. Expected: \("First, Second, Third, Forth, nor Fifth"). Got: \(norSplitArray)",
+                  true: "The String Array And Split did match as expected output. Proof: \(norSplitArray)")
         print("\n=---------------------------------------------------------=\n")
     }
 

@@ -36,4 +36,19 @@ extension Array where Element: CustomStringConvertible {
         }
         return newString
     }
+
+    /// Make a readable array, using nor. (Ex. 10, 12, 85, and 123)
+    public func norSplit() -> String {
+        var newString = ""
+        var index = 0
+        self.forEach { (item) in
+            if index < count - 1 {
+                newString += "\(item), "
+                index += 1
+            } else {
+                newString += "nor \(item)"
+            }
+        }
+        return newString
+    }
 }

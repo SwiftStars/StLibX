@@ -36,10 +36,12 @@ public func repeatUntil<T>(run: @escaping (Int, T?) -> T, check: @escaping (Int,
         if prev != nil { outs.append(prev!) }
         prev = run(times, prev)
         times += 1
-        if check(times, prev!) {
-            return (times, outs)
+        if !check(times, prev!) {
+            continue
         }
+        break
     }
+    return (times, outs)
 }
 
 /// Run a void until it returns true.
@@ -70,8 +72,9 @@ public func repeatUntil<T>(run: @escaping (Int, T?) -> (Bool, T)) -> (index: Int
         prev = run(times, prev.output)
         if !(prev.continue) {
             times += 1
-        } else {
-            return (times, outs)
+            continue
         }
+        break
     }
+    return (times, outs)
 }
