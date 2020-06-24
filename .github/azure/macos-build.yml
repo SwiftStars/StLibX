@@ -15,12 +15,16 @@ steps:
     swift build -v
   displayName: 'Swift Build'
 
-- task: Xcode@5
+- script: |
+    echo Running SwiftStars/StdLibX tests.
+    swift test -v
+  displayName: 'Swift Test'
+
+- task: PublishPipelineArtifact@1
   inputs:
-    actions: 'build test'
-    xcodeVersion: '11'
-    packageApp: false
-    destinationPlatformOption: 'macOS'
-  displayName: 'Xcode Test'
+    targetPath: '.build/'
+    artifact: 'Swift Build Artifacts'
+    publishLocation: 'pipeline'
+
 
 - script: bash <(curl -s https://codecov.io/bash)
