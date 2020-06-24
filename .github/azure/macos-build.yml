@@ -25,6 +25,3 @@ steps:
     targetPath: '.build/'
     artifact: 'Swift Build Artifacts'
     publishLocation: 'pipeline'
-
-
-- script: bash <(curl -s https://codecov.io/bash)
