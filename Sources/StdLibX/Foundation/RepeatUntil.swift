@@ -25,7 +25,8 @@ import Foundation
 ///
 /// - Returns: The number of times `run` has been ran and all the `run`s' outputs.
 ///
-/// **Declared in** [RepeatUntil.swift](https://github.com/SwiftStars/StdLibX/tree/master/Sources/StdLibX/RepeatUntil.swift)
+/// # Declared in
+///  [RepeatUntil.swift](https://github.com/SwiftStars/StdLibX/tree/master/Sources/StdLibX/Foundation/RepeatUntil.swift)
 ///
 @discardableResult
 public func repeatUntil<T>(run: @escaping (Int, T?) -> T, check: @escaping (Int, T) -> Bool) -> (index: Int, outputs: [T]) {
@@ -60,7 +61,8 @@ public func repeatUntil<T>(run: @escaping (Int, T?) -> T, check: @escaping (Int,
 ///
 /// - Parameter run: A function with the input of the number of times it has been run before and the previous output.
 ///
-/// **Declared in** [RepeatUntil.swift](https://github.com/SwiftStars/StdLibX/tree/master/Sources/StdLibX/RepeatUntil.swift)
+/// # Declared in
+///  [RepeatUntil.swift](https://github.com/SwiftStars/StdLibX/tree/master/Sources/StdLibX/Foundation/RepeatUntil.swift)
 ///
 @discardableResult
 public func repeatUntil<T>(run: @escaping (Int, T?) -> (Bool, T)) -> (index: Int, outputs: [T]) {

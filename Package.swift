@@ -13,6 +13,9 @@ let package = Package(
     targets: [
         .target(
             name: "StdLibX",
+            dependencies: ["StdLibXFromC"]),
+        .target(
+            name: "StdLibXFromC",
             dependencies: []),
         .testTarget(
             name: "StdLibXTests",
