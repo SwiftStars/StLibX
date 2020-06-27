@@ -23,11 +23,11 @@ class StringedArraysTests: XCTestCase {
         XCTAssert(norSplitArray == "First, Second, Third, Forth, nor Fifth",
                   false: "The String Array And Split did not match expected output. Expected: \("First, Second, Third, Forth, nor Fifth"). Got: \(norSplitArray)",
                   true: "The String Array And Split did match as expected output. Proof: \(norSplitArray)")
-        print("\n=---------------------------------------------------------=\n")
+        print("\n=----------------------------------------------------------=\n")
     }
 
-    static var myTests = [
-        ("StringedArrays Split Test", testSplit)
+    static var allTests = [
+        ("StringedArrays Split Tests", testSplit)
     ]
 
 }

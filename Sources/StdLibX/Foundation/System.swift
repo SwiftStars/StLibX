@@ -1,8 +1,6 @@
 //
-//  System.swift
-//  StdLibX
-//
-//  Created by Benjamin Sova on 6/26/20.
+// StdLibX Code
+// Copyright © Ben Sova 2020 (MIT)
 //
 
 import Foundation

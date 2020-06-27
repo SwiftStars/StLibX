@@ -56,8 +56,8 @@ final class RepeatUntilTests: XCTestCase {
             true: "repeatUntil(run:check:) was run all 10 times. Proof: \(end) and \(end2)")
         print("\n=----------------------------------------------------------=\n")
     }
-    static var myTests = [
-        ("RepeatUntil Run-Check Test", testRepeatUntilCheck),
-        ("RepeatUntil Run Test", testRepeatUntilRun)
+    static var allTests = [
+        ("RepeatUntil Run-Check Tests", testRepeatUntilCheck),
+        ("RepeatUntil Run Tests", testRepeatUntilRun)
     ]
 }
