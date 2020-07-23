@@ -6,8 +6,8 @@
 import XCTest
 @testable import StdLibX
 
-public func XCTAssert(_ expression: Bool, false flsm: String, true trm: String? = nil, fail: Bool = false) {
-    if expression != fail {
+public func XCTAssert(_ expression: Bool, false flsm: String, true trm: String? = nil, failOn: Bool = false) {
+    if expression != failOn {
         if trm != nil {
             print(trm!)
         }
@@ -52,8 +52,8 @@ final class RepeatUntilTests: XCTestCase {
             return (out == 10, (out ?? 0) + 1)
         }
         XCTAssert(end == 10,
-            false: "repeatUntil(run:check:) was not run all 10 times. It was run \(end) or \(end2) times.",
-            true: "repeatUntil(run:check:) was run all 10 times. Proof: \(end) and \(end2)")
+            false: "repeatUntil(run:) was not run all 10 times. It was run \(end) or \(end2) times.",
+            true: "repeatUntil(run:) was run all 10 times. Proof: \(end) and \(end2)")
         print("\n=----------------------------------------------------------=\n")
     }
     static var allTests = [

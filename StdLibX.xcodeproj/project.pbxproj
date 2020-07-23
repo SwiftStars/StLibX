@@ -21,8 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		76E3E06524CA2CB7001DCFC4 /* FindMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3E06424CA2CB7001DCFC4 /* FindMap.swift */; };
+		76E3E06824CA2FA1001DCFC4 /* FindMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E3E06724CA2FA1001DCFC4 /* FindMapTests.swift */; };
 		76FD218424A7E1E9000C0D20 /* ExitCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD218324A7E1E9000C0D20 /* ExitCodeTests.swift */; };
-		OBJ_38 /* NilInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* NilInit.swift */; };
+		OBJ_38 /* EmptyInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* EmptyInit.swift */; };
 		OBJ_39 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Prompt.swift */; };
 		OBJ_40 /* RepeatUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* RepeatUntil.swift */; };
 		OBJ_41 /* StringedArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* StringedArrays.swift */; };
@@ -41,6 +43,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		76E3E06324CA2C9A001DCFC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "StdLibX::StdLibXTests";
+			remoteInfo = StdLibXTests;
+		};
 		76FD218024A7E1A2000C0D20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -65,8 +74,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76E3E06424CA2CB7001DCFC4 /* FindMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMap.swift; sourceTree = "<group>"; };
+		76E3E06724CA2FA1001DCFC4 /* FindMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMapTests.swift; sourceTree = "<group>"; };
 		76FD218324A7E1E9000C0D20 /* ExitCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitCodeTests.swift; sourceTree = "<group>"; };
-		OBJ_10 /* NilInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NilInit.swift; sourceTree = "<group>"; };
+		OBJ_10 /* EmptyInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInit.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		OBJ_12 /* RepeatUntil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatUntil.swift; sourceTree = "<group>"; };
 		OBJ_13 /* StringedArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringedArrays.swift; sourceTree = "<group>"; };
@@ -156,6 +167,7 @@
 				OBJ_25 /* StringedArraysTests.swift */,
 				76FD218324A7E1E9000C0D20 /* ExitCodeTests.swift */,
 				OBJ_26 /* XCTestManifests.swift */,
+				76E3E06724CA2FA1001DCFC4 /* FindMapTests.swift */,
 			);
 			name = StdLibXTests;
 			path = Tests/StdLibXTests;
@@ -171,7 +183,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -181,7 +193,6 @@
 				OBJ_31 /* LICENSE */,
 				OBJ_32 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -206,7 +217,8 @@
 		OBJ_9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_10 /* NilInit.swift */,
+				76E3E06424CA2CB7001DCFC4 /* FindMap.swift */,
+				OBJ_10 /* EmptyInit.swift */,
 				OBJ_11 /* Prompt.swift */,
 				OBJ_12 /* RepeatUntil.swift */,
 				OBJ_13 /* StringedArrays.swift */,
@@ -236,6 +248,7 @@
 			buildPhases = (
 				OBJ_37 /* Sources */,
 				OBJ_44 /* Frameworks */,
+				76E3E06624CA2CD0001DCFC4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -312,7 +325,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -326,17 +339,38 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76E3E06624CA2CD0001DCFC4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_38 /* NilInit.swift in Sources */,
+				OBJ_38 /* EmptyInit.swift in Sources */,
 				OBJ_39 /* Prompt.swift in Sources */,
 				OBJ_40 /* RepeatUntil.swift in Sources */,
 				OBJ_41 /* StringedArrays.swift in Sources */,
 				OBJ_42 /* System.swift in Sources */,
 				OBJ_43 /* Color.swift in Sources */,
+				76E3E06524CA2CB7001DCFC4 /* FindMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +396,7 @@
 			files = (
 				OBJ_73 /* RepeatUntilTests.swift in Sources */,
 				OBJ_74 /* StringedArraysTests.swift in Sources */,
+				76E3E06824CA2FA1001DCFC4 /* FindMapTests.swift in Sources */,
 				76FD218424A7E1E9000C0D20 /* ExitCodeTests.swift in Sources */,
 				OBJ_75 /* XCTestManifests.swift in Sources */,
 			);
@@ -378,7 +413,7 @@
 		OBJ_67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "StdLibX::StdLibXTests" /* StdLibXTests */;
-			targetProxy = "StdLibX::StdLibXTests" /* StdLibXTests */;
+			targetProxy = 76E3E06324CA2C9A001DCFC4 /* PBXContainerItemProxy */;
 		};
 		OBJ_79 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -7,12 +7,12 @@
 
 // MARK: - API
 
-public protocol NilInit {
+public protocol EmptyInit {
     init()
 }
 
-public extension NilInit {
-    static var defaultValueInit: Self {
+public extension EmptyInit {
+    static var defaultValue: Self {
         return .init()
     }
 }

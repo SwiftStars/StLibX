@@ -6,6 +6,8 @@
 import XCTest
 @testable import StdLibX
 
+#if os(macOS) || os(Linux)
+
 class ExitCodeTests: XCTestCase {
 
     func testExitCodes() throws {
@@ -16,9 +18,11 @@ class ExitCodeTests: XCTestCase {
         XCTAssert(exit2 == 2, false: "\"exit 2\" did not return expected exit code 2. It was \(exit2).", true: "\"exit 2\" returned expected exit code 2. Proof: \(exit2)")
         print("\n=----------------------------------------------------------=\n")
     }
-    
+
     static var allTests = [
         ("System Exit Code Tests", testExitCodes)
     ]
 
 }
+
+#endif

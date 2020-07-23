@@ -5,8 +5,6 @@
 
 import Foundation
 
-#if os(OSX) || os(Linux)
-
 /// Prompt the user for information on the command line.
 ///
 /// - Parameters:
@@ -19,6 +17,9 @@ import Foundation
 ///
 /// **Declared in** [Prompt.swift](https://github.com/SwiftStars/StdLibX/tree/master/Sources/StdLibX/RepeatUntil.swift)
 ///
+@available(iOS, unavailable, message: "System shell input cannot be run on iOS.")
+@available(watchOS, unavailable, message: "System shell input cannot be run on watchOS.")
+@available(tvOS, unavailable, message: "System shell input cannot be run on tvOS.")
 public func prompt(_ message: String, options: [String]? = nil, tryAgain: @escaping (String, [String]) -> String = { (option, options) in "\(option) is not an option. Try \(options.orSplit())" }, maxTries: Int? = nil, onLastTry: String? = nil) -> String {
     var output = ""
     repeatUntil { (index, _) -> (Bool, Never?) in
@@ -41,5 +42,3 @@ public func prompt(_ message: String, options: [String]? = nil, tryAgain: @escap
     }
     return output
 }
-
-#endif
