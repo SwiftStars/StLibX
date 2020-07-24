@@ -32,10 +32,11 @@ Add `pod 'StdLibX'` to your PodFile.
 
 ### For A Swift Package
 
+Add the following code to your `Package.swift`.
 ```swift
 .package(url: "https://github.com/SwiftStars/StdLibX.git", from: "0.0.1")
 ```
-
+or (for the latest commit)
 ```Swift
 .package(url: "https://github.com/SwiftStars/StdLibX.git", .branch("main"))
 ```
