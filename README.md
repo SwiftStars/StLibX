@@ -26,7 +26,7 @@ To use StdLibX in your project...
 
 Or, if you're making a Swift Package, paste the following code into your Package.swift file.
 ```Swift
-.package(url: "https://github.com/SwiftStars/StdLibX.git", .branch("master"))
+.package(url: "https://github.com/SwiftStars/StdLibX.git", .branch("main"))
 ```
 CocoaPods support coming once there is a release.
 
