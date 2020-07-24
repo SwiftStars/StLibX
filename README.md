@@ -18,17 +18,28 @@ If you have some spare time (or code), please contribute to StdLibX. The more co
  Just fork the project, clone it to your computer and add some features (please also document any new features), then push your changes and open a pull request explaining your changes.
 
 ## Using StdLibX in your project.
-To use StdLibX in your project...
+
+### For an App with SPM
+
 1. In the menu bar click `File` -> `Swift Packages` -> `Add Package Dependency.`
 2. Paste `https://github.com/SwiftStars/StdLibX` in the search bar and click `Next`.
 3. Choose `Branch` and leave it at `master`.
 4. Click `Finish`
 
-Or, if you're making a Swift Package, paste the following code into your Package.swift file.
+### For an App with CocoaPods
+
+Add `pod 'StdLibX'` to your PodFile.
+
+### For A Swift Package
+
+```swift
+.package(url: "https://github.com/SwiftStars/StdLibX.git", from: "0.0.1")
+```
+
 ```Swift
 .package(url: "https://github.com/SwiftStars/StdLibX.git", .branch("main"))
 ```
-CocoaPods support coming once there is a release.
+
 
 ## Why is it called StdLibX?
 I got inspired by [SwiftUIX](https://github.com/SwiftUIX/SwiftUIX), but that one has mostly just SwiftUI stuff, this has Foundation stuff. :smile:
