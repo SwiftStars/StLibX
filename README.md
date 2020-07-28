@@ -1,4 +1,5 @@
 # StdLibX
+
 [![Azure Pipelines Build Status](https://img.shields.io/azure-devops/build/SwiftStars/StdLibX/2?logo=Azure%20Pipelines&logoColor=informational&style=flat-square&labelColor=363C43)](https://dev.azure.com/SwiftStars/StdLibX/_build?definitionId=2) [![Code Factor Score](https://img.shields.io/codefactor/grade/github/SwiftStars/StdLibX?logo=codefactor&style=flat-square&labelColor=363C43)](https://www.codefactor.io/repository/github/swiftstars/stdlibx) [![Swift Version (v5.2)](https://img.shields.io/badge/Swift-v5.2-orange?style=flat-square&logo=swift&labelColor=363C43)](https://github.com/apple/swift) [![License MIT](https://img.shields.io/github/license/SwiftStars/StdLibX?color=blue&logo=GitHub&style=flat-square&labelColor=363C43)](LICENSE)
 
 An extension to the Swift Standard Library.
@@ -29,6 +30,8 @@ If you have some spare time (or code), please contribute to StdLibX. The more co
 ### For an App with CocoaPods
 
 Add `pod 'StdLibX'` to your PodFile.
+
+**Warning:** StdLibX does not support `system(_:)` or extra colors when installed using CocoaPods.
 
 ### For A Swift Package
 

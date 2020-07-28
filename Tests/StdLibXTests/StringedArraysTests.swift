@@ -4,6 +4,7 @@
 //
 
 import XCTest
+@testable import StdLibX
 
 class StringedArraysTests: XCTestCase {
 
