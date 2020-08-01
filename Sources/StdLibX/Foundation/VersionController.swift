@@ -86,8 +86,8 @@ extension VersionController {
             fullHistory.append(.reset(history.last!))
             if hard { wrappedValue = history.last!.at }
         case .commit(let id):
-            let commits = fullHistory.allCommits()
-            let inHistory = commits.whereAt(id, at: \.id)
+            let commits = allCommits(fullHistory)
+            let inHistory = history.whereAt(id, at: \.id)
             if let inHistory = inHistory {
                 var commits = commits
                 commits.removeLast(history.count - 1 - inHistory)
@@ -116,15 +116,12 @@ extension VersionController {
 
 // MARK: Resources
 
-extension Array {
-    func allCommits<T>() -> [VersionController<T>.Commit] where Element == VersionController<T>.FullHistory {
-        compactMap { (history) -> VersionController<T>.Commit? in
-            switch history {
-            case .commit(let data): return data
-            default: return nil
-            }
+public func allCommits<T>(_ fullHistory: [VersionController<T>.FullHistory]) -> [VersionController<T>.Commit] {
+    fullHistory.compactMap { (history) -> VersionController<T>.Commit? in
+        switch history {
+        case .commit(let data): return data
+        default: return nil
         }
     }
 }
-
 

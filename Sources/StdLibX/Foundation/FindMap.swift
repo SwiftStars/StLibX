@@ -30,7 +30,7 @@ extension Sequence {
 
     /// Find an element with a certain value in a certain spot.
     ///
-    /// `Sequence.containsAt(_:in:)` looks for all elements in a Sequence that, when passed into `grabItem(_:)` (aka `in`), matches `find`. If nothing is found `findMap` will return `false`, otherwise `true`.
+    /// `Sequence.containsAt(_:in:)` looks for all elements in a Sequence that, when passed into `grabItem(_:)` (aka `in`), matches `find`. If nothing is found `containsAt` will return `false`, otherwise `true`.
     ///
     /// - Parameters:
     ///   - find: The item to compare to the one found in an element.
@@ -45,9 +45,10 @@ extension Sequence {
 }
 
 extension Array {
+
     /// Find the location of the first element with a certain value at a certain spot
     ///
-    /// `Array.whereFrom(_:in:)` looks for all elements in an Array that, when passed into `grabItem(_:)` (aka `in`), matches `find`. If nothing is found `findMap` will return `nil`.
+    /// `Array.whereFrom(_:in:)` looks for all elements in an Array that, when passed into `grabItem(_:)` (aka `in`), matches `find`. If nothing is found `whereAt` will return `nil`.
     ///
     /// - Parameters:
     ///   - find: The item to compare to the one found in an element.
@@ -67,6 +68,6 @@ extension Array {
                 }
             }
         }
-        return status.index
+        return status.found ? status.index : nil
     }
 }

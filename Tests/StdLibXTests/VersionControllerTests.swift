@@ -73,10 +73,12 @@ class VersionControllerTests: XCTestCase {
         } catch let error as VersionController<Int>.ResetError {
             XCTFail("IntController head reset did not work. Error: \(error)")
             print("Exiting since text cannot reasonably continue.")
+            print("\n=----------------------------------------------------------=\n")
             return
         } catch {
             XCTFail("IntController head reset did not work. Error: Unknown")
             print("Exiting since test cannot reasonably continue.")
+            print("\n=----------------------------------------------------------=\n")
             return
         }
         XCTAssert(
@@ -101,6 +103,7 @@ class VersionControllerTests: XCTestCase {
                 XCTFail("IntController origin reset did not work.")
             }
             print("Exiting since test cannot reasonably continue.")
+            print("\n=----------------------------------------------------------=\n")
             return
         }
         XCTAssert(
@@ -117,18 +120,20 @@ class VersionControllerTests: XCTestCase {
             false: "History value or commit message after hard origin reset does not match expected value. Had: \($intController.history.last!), Expected: (_, 200, \"Removed extra 0\", _)"
         )
         XCTAssert(
-            $intController.fullHistory.allCommits().count == 5,
-            false: "Full History all commits count did not match expected value 5. Had: \($intController.fullHistory.allCommits().count)\n\($intController.fullHistory.allCommits())\n\($intController.history)"
+            allCommits($intController.fullHistory).count == 5,
+            false: "Full History all commits count did not match expected value 5. Had: \(allCommits($intController.fullHistory).count)\n\(allCommits($intController.fullHistory))\n\($intController.history)"
         )
         do {
             try $intController.reset(.commit(latestCommit), hard: true)
         } catch {
             if let error = error as? VersionController<Int>.ResetError {
                 XCTFail("IntController commit reset did not work. Error: \(error)")
+                print($intController)
             } else {
                 XCTFail("IntController commit reset did not work.")
             }
             print("Exiting since test cannot reasonably continue.")
+            print("\n=----------------------------------------------------------=\n")
             return
         }
         XCTAssert(
