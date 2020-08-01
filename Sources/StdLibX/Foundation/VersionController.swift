@@ -11,16 +11,23 @@ import Foundation
 
 public typealias Versioned<Variable> = VersionController<Variable>
 
-public struct VersionController<Variable> {
-    public var variable: Variable
+@propertyWrapper public struct VersionController<Variable> {
+    public var wrappedValue: Variable
+    public var projectedValue: Self {
+        get {
+            self
+        } set {
+            self = newValue
+        }
+    }
     
     public typealias Commit = (id: UUID, message: String, at: Variable, time: Date)
     
     public private(set) var history: [Commit]
     public private(set) var fullHistory: [FullHistory]
     
-    public init(_ variable: Variable, _ message: String? = nil) {
-        self.variable = variable
+    public init(wrappedValue: Variable, _ message: String? = nil) {
+        self.wrappedValue = wrappedValue
         self.history = []
         self.fullHistory = []
         if let message = message {
@@ -50,7 +57,7 @@ extension VersionController {
 
 extension VersionController {
     public mutating func commit(_ message: String) {
-        let commit = (UUID(), message, variable, Date())
+        let commit = (UUID(), message, wrappedValue, Date())
         history.append(commit)
         fullHistory.append(.commit(commit))
     }
@@ -66,18 +73,18 @@ extension VersionController {
             } else if commits > history.count - 1 {
                 throw ResetError.notEnoughCommits((commits, history.count))
             }
-            let current = history.last!
             history.removeLast(commits)
-            fullHistory.append(.reset(current))
+            fullHistory.append(.reset(history.last!))
+            if hard { wrappedValue = history.last!.at }
         case .origin(let commits):
             if commits >= history.count - 1 && hard {
                 throw ResetError.notEnoughCommits((commits, history.count))
             } else if commits > history.count - 1 {
                 throw ResetError.notEnoughCommits((commits, history.count))
             }
-            let current = history.last!
             history.removeLast(history.count - 1 - commits)
-            fullHistory.append(.reset(current))
+            fullHistory.append(.reset(history.last!))
+            if hard { wrappedValue = history.last!.at }
         case .commit(let id):
             let commits = fullHistory.allCommits()
             let inHistory = commits.whereAt(id, at: \.id)
@@ -86,6 +93,7 @@ extension VersionController {
                 commits.removeLast(history.count - 1 - inHistory)
                 history = commits
                 fullHistory.append(.reset(commits[inHistory]))
+                if hard { wrappedValue = history.last!.at }
             } else {
                 throw ResetError.cannotFindCommitWithID(id)
             }
@@ -97,11 +105,11 @@ infix operator <- : AssignmentPrecedence
 
 extension VersionController {
     public static func <- (lhs: inout VersionController, rhs: Variable) {
-        lhs.variable = rhs
+        lhs.wrappedValue = rhs
     }
     
     public static func <- (lhs: inout VersionController, rhs: (setTo: Variable, message: String)) {
-        lhs.variable = rhs.setTo
+        lhs.wrappedValue = rhs.setTo
         lhs.commit(rhs.message)
     }
 }
@@ -118,3 +126,5 @@ extension Array {
         }
     }
 }
+
+
