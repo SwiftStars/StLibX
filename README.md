@@ -37,7 +37,7 @@ Add `pod 'StdLibX'` to your PodFile.
 
 Add the following code to your `Package.swift`.
 ```swift
-.package(url: "https://github.com/SwiftStars/StdLibX.git", from: "0.0.1")
+.package(url: "https://github.com/SwiftStars/StdLibX.git", from: "0.0.2")
 ```
 or (for the latest commit)
 ```Swift

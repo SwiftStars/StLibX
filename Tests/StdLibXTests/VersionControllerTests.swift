@@ -67,7 +67,7 @@ class VersionControllerTests: XCTestCase {
         $intController <- (270, "Changed to 270")
 //        let savedHistory = $intController.history
 //        print("History: \(intController.history)")
-        let latestCommit = $intController.history.last!.id
+//        let latestCommit = $intController.history.last!.id
         do {
             try $intController.reset(.head(1))
         } catch let error as VersionController<Int>.ResetError {

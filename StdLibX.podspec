@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "StdLibX"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "An extension to the Swift Standard Library."
 
   spec.description  = <<-DESC
