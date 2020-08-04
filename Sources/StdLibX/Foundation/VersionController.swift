@@ -45,6 +45,7 @@ extension VersionController {
     public enum ResetMode {
         case head(Int)
         case origin(Int)
+        @available(*, deprecated, message: "Reset to using Commit UUID is unreliable and with sometimes fail.")
         case commit(UUID)
     }
     
@@ -87,12 +88,12 @@ extension VersionController {
             if hard { wrappedValue = history.last!.at }
         case .commit(let id):
             let commits = allCommits(fullHistory)
-            let inHistory = history.whereAt(id, at: \.id)
+            let inHistory = commits.whereAt(id, at: \.id)
             if let inHistory = inHistory {
                 var commits = commits
-                commits.removeLast(history.count - 1 - inHistory)
+                commits.removeLast(inHistory - (history.count - 1))
                 history = commits
-                fullHistory.append(.reset(commits[inHistory]))
+                fullHistory.append(.reset(allCommits(fullHistory)[inHistory]))
                 if hard { wrappedValue = history.last!.at }
             } else {
                 throw ResetError.cannotFindCommitWithID(id)
@@ -124,4 +125,3 @@ public func allCommits<T>(_ fullHistory: [VersionController<T>.FullHistory]) -> 
         }
     }
 }
-
