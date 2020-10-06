@@ -45,7 +45,7 @@ extension VersionController {
     public enum ResetMode {
         case head(Int)
         case origin(Int)
-        @available(*, deprecated, message: "Reset to using Commit UUID is unreliable and with sometimes fail.")
+        @available(*, deprecated, message: "Reset to using Commit UUID is unreliable and will sometimes fail.")
         case commit(UUID)
     }
     

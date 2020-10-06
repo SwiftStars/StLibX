@@ -9,10 +9,6 @@ Swift is great. It can do so much that some people don't even know about. You ca
 
 StdLibX hopes to fix that by providing you with type, functions, and extensions that make Swift easier to use without you rewriting the same old redundant code that you may have been using.
 
-StdLibX has one other goal, too. I'm hoping to keep all things in StdLibX documented and tested, so you can easily understand everything you type.
-
-**Fun Fact:** The "Look Up" feature in MacOS works slightly differently in Xcode. It provides documentation for what you clicked on. Plus, this isn't an Apple Library exclusive thing. Try Look Up on `repeatUntil(run:check:)`.
-
 ## Contributing
 If you have some spare time (or code), please contribute to StdLibX. The more code included in the library, the more useful it becomes.
 
